@@ -1,325 +1,124 @@
-body {
-    background-color: #010208;
-}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css? family=Kaushan+Script|Montserrat: 400, 700&amp; subset=cyrillic-ext" rel="stylesheet" >
+  <title>Portfolio</title>
+</head>
+<body>
+    <!--------- шапка ----------->
+  <header>
+    <img src="pictures/logo.png" alt="Логотип">
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Work</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+    <!--------- Баннер ----------->
+  <div class="banner">
+    <h2>Я дизайнер и специализируюсь на <span style="color: #fff;">UI/UX</span> и <span style="color: #fff;">Интерактивном Дизайне</span>.</h2>
+    <a href="#toDown"><div class="arrow"> <img src="pictures/down.png"></div></a>
+  </div>
+    <!--------- клиенты ----------->
+  <div class="clients" id="toDown">
+    <h3>Некоторые <span style="color: #fff;">клиенты с которыми<br>я работала</span></h3>
+    <div class="images">
+      <img src="pictures/airbnb.png">
+      <img src="pictures/google.png">
+      <img src="pictures/microsoft.png">
+      <img src="pictures/fedex.png">
+    </div>
+  </div>
+  
+    <!--------- Работы ----------->
+  <div class="selected-works">
+    <div class="text">
+      <h3><span class="gray">Избранные</span> работы</h3>
+    </div>
+    <div class="content">
+      <img src="pictures/work1.jpg"class="image">
+      <div class="info">
+        <p class="title">Косметическая фирма</p>
+        <p class="description">
+          <span class="gray">Тематическое исследование
+            Routine Builder - Улучшение покупательского опыта по уходу за кожей
+        </p>
+        <p class="subtitle">UX/UI дизайн продукта | Брендинг | Решение проблем</p>
+        <div class="button">
+          <a href="#">ПОКАЗАТЬ РАБОТУ <img src="pictures/strelka.png"></a>
+        </div>
+      </div>
+    </div>
 
-html {
-  scroll-behavior: smooth;
-}
+    <div class="content">
+      <div class="info">
+        <p class="title">Банк</p>
+        <p class="description">
+          <span class="gray">Тематическое исследование
+            Surplus Manager — функция ежедневного управления финансами
+        </p>
+        <p class="subtitle">           
+            UX/UI дизайн продукта | Решение проблем</p>
+        <div class="button">
+          <a href="#">ПОКАЗАТЬ РАБОТУ <img src="pictures/strelka.png"></a>
+        </div>
+      </div>
+      <img src="pictures/work2.jpg" class="image">
+    </div>
 
-/* Шапка */
-header {
-  width: 1440px;
-  height: 96px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #010208;
-}
+    <div class="content">
+      <img src="pictures/work3.jpg" class="image">
+      <div class="info">
+        <p class="title">Авиалинии</p>
+        <p class="description">
+          <span class="gray">Тематическое исследование
+            Создание опыта бронирования рейсов и современное обновление для Panam
+        </p>
+        <p class="subtitle">UX/UI дизайн продукта | Брендинг</p>
+        <div class="button">
+          <a href="#">ПОКАЗАТЬ РАБОТУ <img src="pictures/strelka.png"></a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-header img {
-  height: 56px;
-  margin-left: 40px; 
-}
-
-nav {
-  display: flex;
-  margin-right: 40px; 
-}
-
-nav a {
-  margin-right: 20px;
-  color: #8d8e90;
-  text-transform: uppercase;
-  text-decoration: none;
-  position: relative;
-}
-
-nav a:hover {
-  color: #800080;
-}
-
-a {
-  text-decoration: none;
-  background-image: linear-gradient(currentColor, currentColor);
-  background-position: 0% 100%;
-  background-repeat: no-repeat;
-  background-size: 0% 2px;
-  transition: background-size .3s;
-}
-
-a:hover {
-  background-size: 100% 2px;
-}
-
-
-
-/* Баннер */
-.banner {
-  width: 1440px;
-  height: 704px;
-  background-color: #010208;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #8d8e90;
-  text-align: center;
-}
-
-.banner h2 {
-  color: #8d8e90;
-  font-size: 56px;
-  max-width: calc(100% - 264px - 168px);
-  margin-left: 264px;
-  margin-right: 168px;
-}
-
-.banner .arrow {
-  margin-top: 200px;
-  color: #e3e4e6;
-  font-size: 32px;
-}
-
-/* КЛИЕНТЫ */
-
-.clients {
-  width: 1216px;
-  background-color: #010208;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start; 
-  color: #fff;
-  margin-top: 80px; 
-  margin-left: 112px;
-  margin-right: 112px;
-}
-
-.clients h3 {
-  font-size: 40px;
-  color: #8d8e90; 
-}
-
-.clients .images {
-  display: flex;
-  justify-content: flex-start; 
-  align-items: center;
-  margin-top: 80px;
-  width: 1216px;
-}
-
-.clients .images img {
-  height: 60px;
-  margin-right: 134px; 
-}
-
-/* Работы */
-
-.selected-works {
-display: grid;
-grid-template-columns: 1fr;
-grid-gap: 90px;
-margin-top: 80px;
-margin-left: 110px;
-margin-right: 110px;
-color: #fff;
-}
-
-.text {
-margin-top: 80px;
-margin-bottom: 60px;
-}
-
-.text h3 {
-font-size: 40px;
-margin-top: 80px;
-}
-
-.gray {
-color: #8d8e90;
-}
-
-.content {
-display: grid;
-grid-template-columns: 1fr 594px;
-grid-gap: 32px;
-}
-
-.content:nth-child(even) {
-grid-template-columns: 594px 1fr;
-}
-
-.image {
-justify-self: end;
-width: 594px;
-height: 490px;
-}
-
-.info {
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-align-items: flex-start;
-}
-
-.title {
-font-size: 16px;
-color: #fff;
-margin: 183px 0 0; 
-}
-
-.description {
-font-size: 32px;
-color: #8d8e90;
-margin: 20px 0;
-line-height: 1.2;
-}
-
-.subtitle {
-font-size: 18px;
-color: #8d8e90;
-}
-
-.button {
-
-display: inline-block;
-align-items: center;
-padding: 8px 16px;
-border-radius: 30px;
-border: 1px solid #fff;
-background-color: #000;
-}
-
-.button a {
-text-decoration: none;
-color: #fff;
-font-size: 16px;
-}
-
-.button img {
-width: 24px;
-height: 24px;
-margin-left: 8px;
-}
-
-.button:hover {
-background-color: #800080;
-}
-
-/*ОБО МНЕ*/
-
-.grid-block {
-display: grid;
-grid-template-columns: 1fr 282px;
-grid-gap: 32px;
-padding: 0 110px;
-margin-top: 380px;
-}
-
-.block-content {
-display: flex;
-}
-
-.text {
-color: #ffffff;
-}
-
-.title {
-font-size: 32px;
-}
-
-.description {
-font-size: 32px;
-color: #8d8e90;
-margin: 20px 0;
-line-height: 1.2;
-}
-
-.subtitle {
-font-size: 18px;
-color: #8d8e90;
-margin-top: 20px;
-}
-
-.image_three {
-margin-left: 32px;
-position: relative;
-width: 282px;
-height: 408px;
-}
-
-.image_three img:nth-child(2) {
-position: absolute;
-left: 314px; /* Отступ справа */
-top: -220px; /* Отступ сверху */
-width: 282px;
-height: 408px;
-}
-
-.image_three img:nth-child(3) {
-position: absolute;
-left: 314px; /* Отступ справа */
-bottom: -220px; /* Отступ сверху */
-width: 282px;
-height: 408px;
-}
-
-.image img {
-width: 282px;
-height: 408px;
-}
-
-/* ПОДВАЛ */
-
-footer {
-background-color: #010208;
-padding: 80px 0;
-text-align: center;
-}
-
-.footer-content {
-display: flex;
-flex-direction: column;
-align-items: center;
-width: 592px;
-margin: 80px auto;
-color: #fff;
-}
-
-.text {
-margin-bottom: 60px;
-}
-
-.text h3 {
-font-size: 56px;
-}
-
-.text h3 span {
-color: #8d8e90;
-}
-
-.text p.subtitle {
-font-size: 16px;
-color: #8d8e90;
-}
-
-.images_footer {
-display: flex;
-justify-content: center;
-margin-bottom: 80px;
-}
-
-.images_footer img {
-width: 48px;
-height: 48px;
-margin: 0 56px;
-}
-
-.made-by {
-font-size: 16px;
-}
-
-.made-by span {
-color: #8d8e90;
-}
-
+    <!--------- Обо мне ----------->
+  <div class="grid-block">
+    <div class="block-content">
+      <div class="text">
+        <h3 class="title">Обо мне
+        <p class="description">
+          <span class="gray">Я UI/UX-дизайнер, увлеченная созданием </span> красивых и радостных цифровых впечатлений.
+          Помимо дизайна, я люблю музыку, игры и путешествия.</h3> 
+        </p>
+      </div>
+      <div class="image_three">
+        <img src="pictures/photo1.jpg" style="width: 282px;
+        height: 408px;" alt="Image">
+        <img src="pictures/photo2.jpg"style="width: 282px;
+        height: 408px;" alt="Image 2" >
+        <img src="pictures/photo3.jpg" style="width: 282px;
+        height: 408px;" alt="Image 3">
+      </div>
+    </div>
+  </div>
+    <!--------- подвал ----------->
+  <footer>
+    <div class="footer-content">
+      <div class="text">
+        <h3>Всегда на связи!</h3>
+        <p class="subtitle">Также можете найти меня на ...</p>
+      </div>
+      <div class="images_footer">
+        <img src="pictures/1.png" alt="Image 1">
+        <img src="pictures/2.png" alt="Image 2">
+        <img src="pictures/3.png" alt="Image 3">
+        <img src="pictures/4.png" alt="Image 4">
+      </div>
+      <p class="made-by">Made with ❣️ by Дабаева Номина</p>
+    </div>
+  </footer>
+  
+</body>
+</html>
