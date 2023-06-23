@@ -181,9 +181,10 @@ color: #8d8e90;
 }
 
 .button {
-
-display: inline-block;
+box-sizing: border-box;
+display: flex;
 align-items: center;
+justify-content: center;
 padding: 8px 16px;
 border-radius: 30px;
 border: 1px solid #fff;
